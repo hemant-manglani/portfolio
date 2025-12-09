@@ -9,7 +9,7 @@ const projects = [
     { name: "Civilismart", img: "/project/CivilisMart-1024x214.png", desc: "Digital construction workflow platform", href: "https://civilismart.in" },
     { name: "Dapperz", img: "https://www.pyonix.in/assets/projects/dapperz-logo.png", desc: "Fashion E-commerce", href: "https://dapperz.in" },
     { name: "PaperMaker", img: "https://www.pyonix.in/assets/projects/paperMaker.png", desc: "Paper Generator", href: "" },
-    { name: "Scan2Serve", img: "https://www.pyonix.in/assets/projects/scan2serve-logo.png", desc: "Food Ordering", href: "https://scan2serve.in/I6uX0rf8pWga" },
+    { name: "Scan2Serve", img: "https://www.pyonix.in/assets/projects/scan2serve-logo.png", desc: "Food Ordering", href: "https://scan2serve.in/menu/I6uX0rf8pWga" },
     { name: "Temport", img: "https://www.pyonix.in/assets/projects/temport-logo.png", desc: "Social Media", href: "https://play.google.com/store/apps/details?id=com.temport.temport" },
 ];
 
