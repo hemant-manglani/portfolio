@@ -4,14 +4,13 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
 const projects = [
-    { name: "AgencyWale", img: "https://www.pyonix.in/assets/projects/agencywale-logo.png", desc: "Digital Agency Platform" },
-    { name: "Casa", img: "https://www.pyonix.in/assets/projects/casaLogo.png", desc: "Real Estate Solution" },
-    { name: "Dapperz", img: "https://www.pyonix.in/assets/projects/dapperz-logo.png", desc: "Fashion E-commerce" },
-    { name: "JVK", img: "https://www.pyonix.in/assets/projects/jvk-logo.png", desc: "IoT Devices Alexa/Google" },
-    { name: "PaperMaker", img: "https://www.pyonix.in/assets/projects/paperMaker.png", desc: "Paper Generator" },
-    { name: "Scan2Serve", img: "https://www.pyonix.in/assets/projects/scan2serve-logo.png", desc: "Food Ordering" },
-    { name: "SVJK", img: "https://www.pyonix.in/assets/projects/svjk-logo.png", desc: "CA Firms" },
-    { name: "Temport", img: "https://www.pyonix.in/assets/projects/temport-logo.png", desc: "Social Media" },
+    { name: "AgencyWale", img: "https://www.pyonix.in/assets/projects/agencywale-logo.png", desc: "Digital Agency Platform", href: "https://agencywale.com"},
+    { name: "Casa", img: "https://www.pyonix.in/assets/projects/casaLogo.png", desc: "Real Estate Solution", href: "https://casaconstructions.in" },
+    { name: "Civilismart", img: "/project/CivilisMart-1024x214.png", desc: "Digital construction workflow platform", href: "https://civilismart.in" },
+    { name: "Dapperz", img: "https://www.pyonix.in/assets/projects/dapperz-logo.png", desc: "Fashion E-commerce", href: "https://dapperz.in" },
+    { name: "PaperMaker", img: "https://www.pyonix.in/assets/projects/paperMaker.png", desc: "Paper Generator", href: "" },
+    { name: "Scan2Serve", img: "https://www.pyonix.in/assets/projects/scan2serve-logo.png", desc: "Food Ordering", href: "https://scan2serve.in/I6uX0rf8pWga" },
+    { name: "Temport", img: "https://www.pyonix.in/assets/projects/temport-logo.png", desc: "Social Media", href: "https://play.google.com/store/apps/details?id=com.temport.temport" },
 ];
 
 export default function Projects() {
@@ -39,6 +38,17 @@ export default function Projects() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                             className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-blue-300/50 transition-all duration-500 border border-slate-100 hover:border-blue-300 hover:-translate-y-2 cursor-pointer"
+                            role={project.href ? "link" : undefined}
+                            tabIndex={project.href ? 0 : undefined}
+                            aria-label={project.href ? `Open ${project.name}` : undefined}
+                            onClick={() => project.href && window.open(project.href, "_blank")}
+                            onKeyDown={(event) => {
+                                if (!project.href) return;
+                                if (event.key === "Enter" || event.key === " ") {
+                                    event.preventDefault();
+                                    window.open(project.href, "_blank");
+                                }
+                            }}
                         >
                             <div className="aspect-video p-6 flex items-center justify-center bg-slate-50 group-hover:bg-gradient-to-br group-hover:from-blue-50 group-hover:to-indigo-50 transition-all duration-500">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
