@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import Image from "next/image";
 
 const projects = [
     { name: "AgencyWale", img: "https://www.pyonix.in/assets/projects/agencywale-logo.png", desc: "Digital Agency Platform", href: "https://agencywale.com"},
@@ -51,10 +52,11 @@ export default function Projects() {
                             }}
                         >
                             <div className="aspect-video p-6 flex items-center justify-center bg-slate-50 group-hover:bg-gradient-to-br group-hover:from-blue-50 group-hover:to-indigo-50 transition-all duration-500">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img
+                                <Image
                                     src={project.img}
                                     alt={project.name}
+                                    width={200}
+                                    height={120}
                                     className="max-w-full max-h-full object-contain group-hover:scale-125 group-hover:rotate-3 transition-all duration-500"
                                 />
                             </div>
