@@ -6,7 +6,7 @@ import { ExternalLink } from "lucide-react";
 const projects = [
     { name: "AgencyWale", img: "https://www.pyonix.in/assets/projects/agencywale-logo.png", desc: "Digital Agency Platform", href: "https://agencywale.com"},
     { name: "Casa", img: "https://www.pyonix.in/assets/projects/casaLogo.png", desc: "Real Estate Solution", href: "https://casaconstructions.in" },
-    { name: "Civilismart", img: "/project/CivilisMart-1024x214.png", desc: "Digital construction workflow platform", href: "https://civilismart.in" },
+    { name: "Civilismart", img: "/projects/civilisMart.png", desc: "Digital construction workflow platform", href: "https://civilismart.in" },
     { name: "Dapperz", img: "https://www.pyonix.in/assets/projects/dapperz-logo.png", desc: "Fashion E-commerce", href: "https://dapperz.in" },
     { name: "PaperMaker", img: "https://www.pyonix.in/assets/projects/paperMaker.png", desc: "Paper Generator", href: "" },
     { name: "Scan2Serve", img: "https://www.pyonix.in/assets/projects/scan2serve-logo.png", desc: "Food Ordering", href: "https://scan2serve.in/menu/I6uX0rf8pWga" },

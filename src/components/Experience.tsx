@@ -5,7 +5,7 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
     {
-        role: "Founder & Product Engineer",
+        role: "Backend Engineer / Product Engineer",
         company: "Pyonix Technology",
         location: "Ahmedabad, India",
         period: "Aug 2022 - Present",

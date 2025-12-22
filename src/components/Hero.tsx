@@ -140,7 +140,7 @@ export default function Hero() {
                         Strong expertise in <span className="font-semibold text-blue-600 hover:text-indigo-600 transition-colors">FastAPI, Django, AWS, NLP, ML/DL, WebSockets, Agentic AI, LLM, LangGraph, WebRTC, Docker</span>, and distributed architectures.
                     </p>
                     <p className="hover:text-slate-800 transition-all duration-300 hover:scale-[1.02] cursor-default">
-                        As a startup founder, I've handled end-to-end product development, architecture, team collaboration, and client communication—strengthening my problem-solving skills and entrepreneurial mindset.
+                        As a Product Engineer, I've handled end-to-end product development, architecture, team collaboration, and client communication—strengthening my problem-solving skills and entrepreneurial mindset.
                     </p>
                     <p className="hover:text-slate-800 transition-all duration-300 hover:scale-[1.02] cursor-default">
                         Now seeking to join a high-growth, forward-thinking company where I can contribute my expertise, learn from a strong team, and accelerate professional growth while delivering meaningful value.
