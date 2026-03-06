@@ -8,13 +8,14 @@ import { EndToEnd } from './components/EndToEnd';
 import { CTA } from './components/CTA';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { WhatsAppButton } from './components/WhatsAppButton';
 
 export default function App() {
   return (
     <div className="relative min-h-screen bg-[#0a0a1a] text-white overflow-x-hidden">
       {/* Animated particle background */}
       <AnimatedBackground />
-      
+
       {/* Main content */}
       <div className="relative z-10">
         <Hero />
@@ -26,6 +27,7 @@ export default function App() {
         <CTA />
         <Contact />
         <Footer />
+        <WhatsAppButton />
       </div>
     </div>
   );

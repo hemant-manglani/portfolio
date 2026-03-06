@@ -1,46 +1,46 @@
 import { motion } from 'motion/react';
-import { Lightbulb, Layout, Code2, TestTube, Rocket, CheckCircle2 } from 'lucide-react';
+import { Lightbulb, Code2, TestTube, Rocket, Activity, CheckCircle2 } from 'lucide-react';
 
 const phases = [
   {
     icon: Lightbulb,
-    title: 'Prototype',
-    description: 'Transform your ideas into interactive prototypes and proof of concepts',
+    title: 'Discovery & Design',
+    description: 'Requirement analysis, system architecture, and UI/UX planning before writing code',
     gradient: 'from-yellow-500 to-orange-500',
-  },
-  {
-    icon: Layout,
-    title: 'System Design',
-    description: 'Architecture planning, database design, and scalable infrastructure setup',
-    gradient: 'from-purple-500 to-pink-500',
   },
   {
     icon: Code2,
     title: 'Development',
-    description: 'Full-stack development using modern technologies and best practices',
+    description: 'Agile full-stack engineering with clean, modular, and maintainable code practices',
     gradient: 'from-blue-500 to-cyan-500',
   },
   {
     icon: TestTube,
-    title: 'Testing',
-    description: 'Comprehensive testing including unit, integration, and performance tests',
+    title: 'Continuous Integration',
+    description: 'Automated testing, code quality checks, and reliable build verification',
     gradient: 'from-cyan-500 to-teal-500',
   },
   {
     icon: Rocket,
-    title: 'Production',
-    description: 'Deployment on AWS with Docker containerization and CI/CD pipelines',
-    gradient: 'from-pink-500 to-purple-500',
+    title: 'Continuous Deployment',
+    description: 'Zero-downtime automated deployment pipelines to scalable cloud infrastructure',
+    gradient: 'from-purple-500 to-pink-500',
+  },
+  {
+    icon: Activity,
+    title: 'Monitoring & Scaling',
+    description: 'Real-time performance metrics, health monitoring, and system optimization',
+    gradient: 'from-pink-500 to-rose-500',
   },
 ];
 
 const technologies = [
-  { name: 'Docker', description: 'Containerization' },
-  { name: 'AWS', description: 'Cloud Infrastructure' },
-  { name: 'CI/CD', description: 'Automated Deployment' },
-  { name: 'GitHub Actions', description: 'Pipeline Automation' },
-  { name: 'EC2 & Lambda', description: 'Compute Services' },
-  { name: 'Monitoring', description: 'CloudWatch & Logging' },
+  { name: 'Version Control', description: 'Git & GitHub' },
+  { name: 'Containerization', description: 'Docker & Kubernetes' },
+  { name: 'CI/CD Pipelines', description: 'GitHub Actions / GitLab CI' },
+  { name: 'Cloud Infrastructure', description: 'AWS / Vercel' },
+  { name: 'Testing Automation', description: 'Jest / Cypress / Playwright' },
+  { name: 'Monitoring & Logs', description: 'Datadog / CloudWatch / Sentry' },
 ];
 
 export function EndToEnd() {
