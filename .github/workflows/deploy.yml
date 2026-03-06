@@ -1,4 +1,4 @@
-name: Deploy Next.js to GitHub Pages
+name: Deploy React to GitHub Pages
 
 on:
   push:
@@ -31,13 +31,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Next.js
+      - name: Build React App
         run: npm run build
+
+      - name: Copy backend files
+        run: cp send-email.php dist/
+
+      - name: Create .env file for backend
+        run: echo "BREVO_API_KEY=${{ secrets.BREVO_API_KEY }}" > dist/.env
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./dist
 
   deploy:
     environment:
