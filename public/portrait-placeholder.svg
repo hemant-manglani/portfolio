@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1120" width="900" height="1120" role="img" aria-label="Portrait placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#151417"/>
+      <stop offset="1" stop-color="#0b0b0c"/>
+    </linearGradient>
+    <linearGradient id="fig" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9b45a"/>
+      <stop offset="1" stop-color="#b8842f"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.36" r="0.55">
+      <stop offset="0" stop-color="#e9b45a" stop-opacity="0.20"/>
+      <stop offset="1" stop-color="#e9b45a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="1120" fill="url(#bg)"/>
+  <g stroke="#26242a" stroke-width="1">
+    <line x1="0" y1="280" x2="900" y2="280"/>
+    <line x1="0" y1="560" x2="900" y2="560"/>
+    <line x1="0" y1="840" x2="900" y2="840"/>
+    <line x1="300" y1="0" x2="300" y2="1120"/>
+    <line x1="600" y1="0" x2="600" y2="1120"/>
+  </g>
+  <rect width="900" height="1120" fill="url(#glow)"/>
+  <g fill="url(#fig)" opacity="0.92">
+    <circle cx="450" cy="430" r="150"/>
+    <path d="M210 1120 C210 860 300 720 450 720 C600 720 690 860 690 1120 Z"/>
+  </g>
+  <g font-family="monospace" fill="#6c6860" font-size="20" letter-spacing="4">
+    <text x="60" y="80">HEMANT MANGLANI</text>
+    <text x="60" y="1060" font-size="15">PLACEHOLDER · REPLACE /public/portrait.jpg</text>
+  </g>
+</svg>

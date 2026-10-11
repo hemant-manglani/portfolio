@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hemant Manglani — Portfolio
 
-## Getting Started
+A cinematic, conversion-focused portfolio built to win high-ticket international clients.
+Next.js 16 (App Router) · TypeScript · Tailwind v4 · React Three Fiber · Motion · Lenis.
 
-First, run the development server:
+Positioning, case-study structure and trust signals follow *The Overlap* playbook; the 3D hero is
+the one bold visual moment, built to stay fast and accessible.
+
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # local dev at http://localhost:3000
+npm run build    # production build
+npm start        # serve the production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Before you launch — swap these in
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Photo** — the real portrait lives at `public/hemant_profile.png` and is wired into
+   `components/hero/Portrait.tsx`, `app/about/page.tsx`, and `components/sections/FinalCTA.tsx`.
+2. **Links** — `content/site.ts`: `linkedin`, `github`, `calLink` (Cal.com/Calendly), and `url`
+   (already `https://hemant-manglani.com`, used for SEO/OG).
+3. **Résumé** — the PDF is at `public/Hemant_Manglani_Backend_Engineer.pdf` (matches
+   `site.resumeHref`).
+4. **Live project URLs** — `content/projects.ts`: every case study currently defaults to `nda: true`,
+   which renders a "private walkthrough on a call" note instead of a link. For any project that is
+   publicly visitable, add `liveUrl: "https://…"` and a "Visit live site" button replaces the NDA
+   note (and the work list shows a "Live site" chip instead of "NDA").
+5. **Real metrics** — `content/projects.ts`: replace the qualitative `results` (marked
+   `// TODO(metric)`) with real numbers as you get them. Add real client `quote`s when you have them
+   (currently omitted rather than faked).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contact form (Brevo via `send-email.php`)
 
-## Learn More
+The site is a static export, so the `/contact` form posts to a small PHP endpoint that ships in
+`public/send-email.php` and deploys **next to the site** on Hostinger (same origin, no Next.js API
+route). That script sends the enquiry through Brevo's transactional API and delivers it to
+`hemant.manglani01@gmail.com`.
 
-To learn more about Next.js, take a look at the following resources:
+On the server, create `public_html/.env` with your Brevo key (see `send-email.env.example`):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+BREVO_API_KEY=xkeysib-...        # Brevo transactional API key
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The Brevo `sender` in `send-email.php` (`contact@pyonix.in`) must be a verified sender in that
+Brevo account. The form endpoint defaults to same-origin `/send-email.php`; override with
+`NEXT_PUBLIC_CONTACT_ENDPOINT` at build time if you move it.
 
-## Deploy on Vercel
+## Design tokens
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Colors, fonts and motion easing live in `app/globals.css` under `@theme`. The palette is a cool
+near-black with a signature vivid-violet accent (`#8750f7`); type is **Sora** everywhere with
+**Russo One** for heavy display numerals (Gerold theme pairing).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy (Hostinger, static)
+
+`npm run build` emits a fully static site into `out/` (`output: "export"` + `trailingSlash`). Upload
+the contents of `out/` to Hostinger's `public_html` (or zip `out/` and extract it there). No Node
+runtime is required. Point the `hemant-manglani.com` domain at that hosting.
